@@ -5,13 +5,15 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 const port = 5000;
 
+// Enable CORS for all domains
+app.use(cors({
+  origin: '*', // Allow all domains
+}));
 
-app.use(cors()); 
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI("AIzaSyDJ4DLnVBilagWOTS0u77lo0wuwcm32qTM");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
 
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
@@ -31,7 +33,7 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-
-app.listen(port, () => {
-  console.log(`🚀 Server is running at http://localhost:${port}`);
+// Make the server listen on all network interfaces
+app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Server is running at http://0.0.0.0:${port}`);
 });
