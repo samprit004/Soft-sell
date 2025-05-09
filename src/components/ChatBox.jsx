@@ -56,7 +56,7 @@ const ChatBox = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed bottom-20 right-5 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-96 max-h-[500px] min-h-[500px] flex flex-col z-50 transition-all duration-300 ease-in-out">
+   <div className="fixed bottom-4 right-4 sm:bottom-20 sm:right-5 w-[90vw] max-w-md sm:w-96 bg-white border border-gray-200 rounded-lg shadow-xl p-3 sm:p-4 max-h-[80vh] sm:max-h-[500px] min-h-[70vh] sm:min-h-[500px] flex flex-col z-50 transition-all duration-300 ease-in-out">
       <div className="flex justify-between items-center mb-3 pb-2 border-b border-gray-300">
         <div className="flex items-center space-x-2">
           <MessageSquare className="text-blue-500 w-5 h-5" />
