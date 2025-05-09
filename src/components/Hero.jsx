@@ -72,23 +72,27 @@ export default function Hero() {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
-          variants={itemVariants}
-        >
-          <span className="relative inline-block">
-            <span className="relative z-10">Sell Your Unused Software Licenses</span>
-            <motion.span 
-              className="absolute bottom-0 left-0 w-full h-3 bg-indigo-100 z-0"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-            />
-          </span>
-          <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-            The Smart Way
-          </span>
-        </motion.h1>
+        className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight text-center"
+        variants={itemVariants}
+      >
+        <span className="block relative z-10">
+          Sell Your Unused Software Licenses
+        </span>
+
+        {/* Animated Line in Between */}
+        <motion.span 
+          className="my-4 mx-auto block h-3 w-full bg-indigo-100 rounded"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
+          style={{ transformOrigin: "center" }}
+        />
+
+        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+          The Smart Way
+        </span>
+      </motion.h1>
+
 
         <motion.p 
           className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12"

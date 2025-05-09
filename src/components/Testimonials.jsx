@@ -74,8 +74,10 @@ export default function Testimonials() {
               className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
             >
               <div className="relative">
-                <Quote className="absolute -top-2 -left-2 h-8 w-8 text-gray-200 z-0" />
-                <p className="relative z-10 text-gray-600 text-lg italic mb-8">"{testimonial.quote}"</p>
+                <Quote className="absolute top-0 left-0 h-8 w-8 text-gray-200 z-0" />
+                <p className="relative z-10 text-gray-600 text-lg italic mb-8 pt-8">
+                  "{testimonial.quote}"
+                </p>
               </div>
 
               <div className="flex items-center">
